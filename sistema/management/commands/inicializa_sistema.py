@@ -21,7 +21,7 @@ class Command(BaseCommand):
         if created:
             self.stdout.write(self.style.SUCCESS(f'Perfil criado: {perfil_estoquista.nome}'))
 
-        perfil_vendedor, created = Perfil.objects.get_or_create(nome='vendedor')
+        perfil_vendedor, created = Perfil.objects.get_or_create(nome='Vendedor')
         if created:
             self.stdout.write(self.style.SUCCESS(f'Perfil criado: {perfil_vendedor.nome}'))
 
@@ -31,7 +31,7 @@ class Command(BaseCommand):
             usuario = User(
                 email = 'adm@gmail.com',
                 nome = 'Administrador',
-                is_admin = True
+                is_admin = True,
                 departamento = departamento
             )
 
