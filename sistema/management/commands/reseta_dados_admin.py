@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         User = get_user_model()
         try:
-            admin_user = User.objects.get(id=3)
+            admin_user = User.objects.get(id=5)
             admin_user.nome = 'Administrador'
             admin_user.password = make_password('123456')
             admin_user.save()
